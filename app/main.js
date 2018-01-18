@@ -4,15 +4,17 @@ import Rockstar from './App';
 import Searchbar from './searchbar'
 var oneliner=require('one-liner-joke');
 var getRandomJoke = oneliner.getRandomJoke();
+import request from 'request';
+var data;
+request({url:' https://www.googleapis.com/youtube/v3/search?part=snippet&q=horzo&key=AIzaSyBjtnBqKIW8aoPpMCw1W1l7SwtCQpXGfxc',
 
-const url = 'http://youtube.com/watch?v=34aQNMvGEZQ';
-const decoder = require('lame').Decoder;
-const speaker = require('speaker');
+      json:true },
+(error,response,body)=>
+{
 
-var music= youtube(url)
-.pipe(decoder())
-.pipe(speaker());
+});
 
+console.log(data);
 const App=()=>{
   return(
     <div>

@@ -21,11 +21,10 @@ module.exports = {
   resolve: {
    extensions: ['.js', '.es6','.jsx']
  },node: {
+    console: true,
+    fs: "empty",
+    net: "empty",
+    tls: "empty"
+  }
 
-   fs: "empty"
-},browser:{
-  net: "empty",
-  tls: "empty",
-
-}
 }
